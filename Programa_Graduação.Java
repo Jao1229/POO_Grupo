@@ -1,36 +1,34 @@
 package br.com.entities;
 
-public class Graduacao_Nome // mudar o nome o nome da classe para Graduacao_Andreas_Joao {
-	private String nome;
-	private String matricula;
-	private String cpf;
+public class Graduacao_Andreas_Joao_Caio extends Pessoas{
+	
 	private String cursoGraduacao;
 	
-	public String getNome() {
-		return nome;
+
+	public Graduacao_Andreas_Joao_Caio(String cpf, String nome, String matricula, String cursoGraduacao) {
+		super(cpf, nome, matricula);
+		this.cursoGraduacao = cursoGraduacao;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+
+
+	public String getCursoGraduacao() {
+		return cursoGraduacao;
 	}
-	public String getMatricula() {
-		return matricula;
+
+
+
+	public void setCursoGraduacao(String cursoGraduacao) {
+		this.cursoGraduacao = cursoGraduacao;
 	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	
-	@Override
-	public String toString() {
-		return "Graduacao_Nome [nome=" + nome + ", matricula=" + matricula + ", cpf=" + cpf + "]";
-	}
-	
-	
-	
+    @Override
+    public String toString() {
+        return "GRADUAÇÃO -> Nome: " + getNome() +
+               ", CPF: " + getCpf() +
+               ", Matrícula: " + getMatricula() +
+               ", Curso: " + cursoGraduacao;
+    }
+		
 
 }
+
