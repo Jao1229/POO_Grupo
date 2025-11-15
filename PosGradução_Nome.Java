@@ -1,36 +1,28 @@
 package br.com.entities;
 
-public class PosGraduacao_NomeIntegrantes //Mudar o nome para PosGraduacao_Andreas_Joao {
+public class Posgraduacao_Andreas_Joao_Caio extends Pessoas {
 	
-	private String nome;
-	private String cpf;
-	private String matricula;
 	private String cursoPos;
-	
-	public String getNome() {
-		return nome;
+
+	public Posgraduacao_Andreas_Joao_Caio(String cpf, String nome, String matricula, String cursoPos) {
+		super(cpf, nome, matricula);
+		this.cursoPos = cursoPos;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public String getCursoPos() {
+		return cursoPos;
 	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getMatricula() {
-		return matricula;
-	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
+
+	public void setCursoPos(String cursoPos) {
+		this.cursoPos = cursoPos;
 	}
 	
 	@Override
 	public String toString() {
-		return "PosGraduacao_NomeIntegrantes [nome=" + nome + ", cpf=" + cpf + ", matricula=" + matricula + "]";
-	}
-	
-	
+        return "POS-GRADUAÇÃO -> Nome: " + getNome() +
+                ", CPF: " + getCpf() +
+                ", Matrícula: " + getMatricula() +
+                ", Curso: " + cursoPos;
+     }	
 
 }
